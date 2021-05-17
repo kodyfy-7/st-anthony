@@ -8,7 +8,7 @@
         
         <div class="form-group">
             {{Form::label('role', 'Council Role')}}
-            {{Form::text('role', old('role') ?? $group->council_role, ['id' => 'role', 'class' => 'form-control' . ($errors->has('role') ? ' form-control is-invalid' : null), 'placeholder' => '', 'autocomplete' => 'off'])}}
+            {{Form::text('role', old('role') ?? $council->council_role, ['id' => 'role', 'class' => 'form-control' . ($errors->has('role') ? ' form-control is-invalid' : null), 'placeholder' => '', 'autocomplete' => 'off'])}}
             @error('role') <span class="text-danger"><small><strong>{{ $message }}</strong></small></span> @enderror
         </div>
         

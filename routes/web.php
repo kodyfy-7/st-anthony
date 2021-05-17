@@ -99,6 +99,7 @@ Route::prefix('sysAdmin')->group(function(){
 
     Route::resource('/priests', App\Http\Controllers\Users\Admin\PriestController::class);
 
+    Route::resource('/councils', App\Http\Controllers\Users\Admin\CounciController::class);
 
     Route::resource('/settings', App\Http\Controllers\Users\Admin\SettingController::class);
 

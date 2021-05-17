@@ -1,15 +1,15 @@
 @extends('layouts.panel')
 
 @section('title')
-  Group
+  Parish Council
 @endsection
 
 @section('page_title')
-  Group | <a href="/sysAdmin/groups/create"  class="btn btn-default btn-sm"><i class="fa fa-plus"></i></a>
+  Parish Council | <a href="/sysAdmin/councils/create"  class="btn btn-default btn-sm"><i class="fa fa-plus"></i></a>
 @endsection
 
 @section('breadcrumb')
-  Group
+  Parish Council
 @endsection
 
 
@@ -30,7 +30,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">All groups</h3>
+                <h3 class="card-title">Members of  council</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -38,30 +38,24 @@
                   <thead>
                     <tr>
                       <th>S/N</th>
-                      <th>Group</th>
-                      <th>Description</th>
-                      <th>President</th>
-                      <th>Motto</th>
-                      <th>Meeting Time</th>
-                      <th>Action</th>
+                      <th>Full name</th>
+                      <th>Role</th>
+                      <th>Image</th>
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach ($groups as $group)
+                    @foreach ($councils as $council)
                       <tr>
                           <td>{{$loop->iteration}}</td>
-                          <td>{{$group->group_title}}</td>
-                          <td>{{$group->group_description}}</td>
-                          <td>{{$group->user->profile->full_name}}</td>
-                          <td>{{$group->group_motto}}</td>
-                          <td>{{$group->group_time_meeting}}</td>
+                          <td>{{$council->user->profile->full_name}}</td>
+                          <td>{{$council->council_role}}</td>
                           <td>
                             <div class="form-group">
-                                  <a href="/sysAdmin/groups/{{$group->group_slug}}/edit" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a> 
+                            <a href="/sysAdmin/councils/{{$council->council_slug}}/edit" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a> 
 
-                                  <!--<a href="{{URL::to('/sysAdmin/groups/destroy/'.$group->group_slug)}}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a> -->
+                                  <!--<a href="{{URL::to('/sysAdmin/councils/destroy/'.$council->group_slug)}}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a> -->
 
-                                  {!!Form::open(['route' => ['groups.destroy', $group->id], 'method' => 'POST'])!!}
+                                  {!!Form::open(['route' => ['councils.destroy', $council->id], 'method' => 'POST'])!!}
                                   {{Form::hidden('_method', 'DELETE')}}
                                   {{Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit','class' => 'btn btn-danger btn-sm'])}}
                                 {!!Form::close()!!}
