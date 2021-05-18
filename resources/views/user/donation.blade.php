@@ -22,7 +22,7 @@ Donations
         <div class="row">
 
           <div class="col-lg-12 mt-lg-0">
-
+            @include('inc.messages')
             <form action="{{ route('pay') }}" method="POST" role="form" class="form-data" id="paymentForm">
               {{ csrf_field() }}
 

@@ -56,7 +56,8 @@ class PaymentController extends Controller
         $transactionID = Flutterwave::getTransactionIDFromCallback();
         $data = Flutterwave::verifyTransaction($transactionID);
 
-        dd($data);
+        //dd($data);
+        return view('user.donation')->with('success', 'Your donation has been received, thank you.');;
         // Get the transaction from your DB using the transaction reference (txref)
         // Check if you have previously given value for the transaction. If you have, redirect to your successpage else, continue
         // Confirm that the $data['data']['status'] is 'successful'
