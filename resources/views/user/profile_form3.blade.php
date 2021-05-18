@@ -52,7 +52,7 @@
         <div class="col-md-6">
             <div class="form-group">
               <label>Select Groups</label>
-              <select class="select2" multiple="multiple" data-placeholder="Select a State" name="groups[]" style="width: 100%;">
+              <select class="select2" multiple="multiple" data-placeholder="Select groups you belong to" name="groups[]" style="width: 100%;">
                 @foreach ($groups as $group)
                     <option value="{{$group->id}}">{{$group->group_title}}</option>
                 @endforeach
