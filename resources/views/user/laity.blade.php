@@ -1,39 +1,38 @@
 @extends('layouts.frontal')
 
 @section('pageTitle')
-  {{$groupName}}
-@endsection
-
-@section('breadCrumb')
-  {{$groupName}}
+  Parish Council
 @endsection
 
 
 @section('content')
+
     <!-- ======= groups Section ======= -->
     <section id="groups" class="groups">
       <div class="container" data-aos="fade-up">
 
+        <div class="section-title">
+          <p>Parish Council</p>
+        </div>
+
         <div class="row">
-          @foreach ($groups as $group)
+          @foreach($councils as $council)
+          
             <div class="col-lg-4 col-md-6">
               <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <img src="{{$group->group_profile_photo_path}}" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                  <h4>{{$group->group_title}}</h4>
-                  <span>{{$group->group_motto}}</span>
-                </div>
-                  <div class="social">
-                  <a href="/group/{{$group->group_slug}}"><i class="bi bi-link"></i></a>
+              <img src="{{ $council->user->profile->profile_photo_path }}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>{{ $council->user->profile->full_name }}</h4>
+                  <span>{{ $council->council_role }}</span>
                 </div>
               </div>
             </div>
-          </div>
+            </div>
           @endforeach
         </div>
 
       </div>
     </section><!-- End groups Section -->
-    
+
 @endsection

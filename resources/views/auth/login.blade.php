@@ -32,10 +32,10 @@
             </div>
           </div>
           @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+          @enderror
         </div>
         <div class="row">
           <div class="col-8">
@@ -56,7 +56,7 @@
 
       <div class="social-auth-links text-center mt-2 mb-3">
         <a href="/sysAdmin/login" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in as an administrator
+          <i class="fab fa-user mr-2"></i> Sign in as an administrator
         </a>
       </div>
       <!-- /.social-auth-links -->

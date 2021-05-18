@@ -55,23 +55,25 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="{{route('welcome')}}">St. Anthony</a></h1>
+      <!--<h1 class="logo me-auto me-lg-0"><a href="{{route('welcome')}}">St. Anthony</a></h1>-->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="{{route('welcome')}}" class="logo me-auto me-lg-0"><img src="{{ asset('frontal/assets/img/logo.png')}}" alt="" class="img-fluid"></a>-->
+       <a href="{{route('welcome')}}" class="logo me-auto me-lg-0"><img src="{{ asset('frontal/assets/img/logo.png')}}" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
             <li><a class="nav-link" href="{{route('welcome')}}">Home</a></li>
-            <li><a class="nav-link" href="{{route('about')}}">About</a></li>
+            
             <li><a class="nav-link" href="{{route('laity')}}">Parish Council</a></li>
             <li class="dropdown"><a href="#"><span>Church Groups</span> <i class="bi bi-chevron-down"></i></a>
-        <ul>
-            <li><a href="{{route('organization')}}">Organizations</a></li>
-            <li><a href="{{route('liturgical')}}">Liturgical Societies</a></li>
-            <li><a href="{{route('society')}}">Societies</a></li>
-            <li><a href="{{route('community')}}">Basic Christian Communities</a></li>
-        </ul>
-    </li>
+              <ul>
+                  <li><a href="{{route('organization')}}">Organizations</a></li>
+                  <li><a href="{{route('liturgical')}}">Liturgical Societies</a></li>
+                  <li><a href="{{route('society')}}">Societies</a></li>
+                  <li><a href="{{route('community')}}">Basic Christian Communities</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link" href="{{url('/donations')}}">Donations & Support</a></li>
+            
             <li><a class="nav-link" href="/daily_readings">Daily Readings</a></li>
             <li><a class="nav-link" href="{{route('gallery')}}">Gallery</a></li>
             <!-- Authentication Links -->
@@ -107,7 +109,6 @@
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
-      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
 
     </div>
   </header><!-- End Header -->
@@ -126,7 +127,7 @@
           </div>
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-          <a href="https://www.youtube.com/watch?v=GlrxcuEDyF8" class="glightbox play-btn"></a>
+          <a href="https://youtu.be/KzDD8ux3Tqk" class="glightbox play-btn"></a>
         </div>
 
       </div>

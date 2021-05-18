@@ -69,15 +69,6 @@ Route::get('/contact_us', function () {
     return view('user.contact');
 })->name('contact');
 
-Route::get('/about_us', function () {
-    return view('user.about');
-})->name('about');
-
-Route::get('/history', function () {
-    return view('user.history');
-})->name('history');
-
-
 
 Auth::routes();
 
